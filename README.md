@@ -30,7 +30,7 @@ Red social fullstack especializada en mascotas: API REST con Java y Spring Boot,
 
 ## ¿Qué es Patitas Conectadas?
 
-Redes como Instagram o Facebook no están pensadas para gestionar perfiles de mascotas ni para conectar a personas que comparten el cuidado de sus animales. Patitas Conectadas cubre ese hueco: una red social vertical donde los dueños pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, y gestionar el perfil de sus mascotas — todo en un entorno pensado exclusivamente para ello.
+Redes como Instagram o Facebook no están pensadas para gestionar perfiles de mascotas ni para conectar a personas que comparten el cuidado de sus animales. Patitas Conectadas cubre ese hueco: una red social vertical donde los dueños pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, y gestionar el perfil de sus mascotas, todo en un entorno pensado exclusivamente para ello.
 
 El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología Scrum, gestión de tareas en Trello y desplegado en producción.
 
@@ -205,7 +205,18 @@ Este repositorio agrupa toda la documentación generada durante el desarrollo de
 
 | | |
 |---|---|
-| **Fernando Diaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) · ferdiaz1997@gmail.com |
+| **Fernando Diaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) |
 | **Mouad Sedjari** | [github.com/Msedjari](https://github.com/Msedjari) |
 
 Proyecto Final de Grado · Ciclo Superior de Desarrollo de Aplicaciones Web (DAW)
+
+---
+
+## Licencia
+
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)
+
+---
+
+<p align="center">Made with ❤️ for animals everywhere</p>
+
