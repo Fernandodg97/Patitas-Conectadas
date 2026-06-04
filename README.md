@@ -125,3 +125,13 @@ El TFG entregado funcionaba en local. Tras la defensa, Fernando continuó de for
 |---|---|
 | **Fernando Diaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) |
 | **Mouad Sedjari** | [github.com/Msedjari](https://github.com/Msedjari) |
+
+---
+
+## Licencia
+
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es)
+
+---
+
+<p align="center">Made with ❤️ for animals everywhere</p>
