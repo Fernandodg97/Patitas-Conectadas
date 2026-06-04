@@ -119,6 +119,11 @@ El TFG entregado funcionaba en local. Tras la defensa, Fernando continuó de for
 
 ---
 
+## Nota obtenida
+9 /10
+
+---
+
 ## Autores
 
 | | |
