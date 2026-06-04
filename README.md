@@ -6,12 +6,16 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Scrum](https://img.shields.io/badge/Metodología-Scrum-0052CC?style=for-the-badge&logo=trello&logoColor=white)]()
 
-Red social fullstack para dueños de mascotas, desarrollada de forma autónoma como proyecto de portafolio. Cubre el stack completo: API REST con Java y Spring Boot, frontend SPA con React y TypeScript, autenticación JWT, almacenamiento de imágenes en la nube (Cloudinary), base de datos PostgreSQL en Supabase y despliegue con Docker en Render.
+**Proyecto Final de Grado · Desarrollo de Aplicaciones Web (DAW)**
+Desarrollado en equipo por **Fernando Díaz** y **Mouad Sedjari**.
+
+Red social fullstack especializada en mascotas: API REST con Java y Spring Boot, frontend SPA con React y TypeScript, autenticación JWT, almacenamiento de imágenes en Cloudinary, base de datos PostgreSQL en Supabase, despliegue con Docker en Render y metodología ágil Scrum.
 
 ---
 
-### Demo en vivo — Usuario: `usuario@usuario.com` · Contraseña: `usuario`
+### 🚀 Demo en vivo — Usuario: `usuario@usuario.com` · Contraseña: `usuario`
 
 | | Enlace |
 |---|---|
@@ -20,15 +24,15 @@ Red social fullstack para dueños de mascotas, desarrollada de forma autónoma c
 | 🗄️ **Repositorio Backend** | [API-PatitasConectadas-Docker](https://github.com/Fernandodg97/API-PatitasConectadas-Docker) |
 | 💻 **Repositorio Frontend** | [Front-Patitas-Conectadas-render.com](https://github.com/Fernandodg97/Front-Patitas-Conectadas-render.com) |
 
-> Los servicios en Render pueden tardar ~30 segundos en arrancar si llevan un rato sin recibir tráfico (plan gratuito).
+> ⏱️ Los servicios en Render pueden tardar ~30 segundos en arrancar si llevan un rato sin recibir tráfico (plan gratuito).
 
 ---
 
 ## ¿Qué es Patitas Conectadas?
 
-Una red social donde los dueños de mascotas pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, y gestionar el perfil de sus mascotas. Funcionalmente es similar a una combinación de Instagram y Facebook Groups, acotada al mundo animal.
+Redes como Instagram o Facebook no están pensadas para gestionar perfiles de mascotas ni para conectar a personas que comparten el cuidado de sus animales. Patitas Conectadas cubre ese hueco: una red social vertical donde los dueños pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, geolocalizar usuarios cercanos y gestionar el perfil de sus mascotas — todo en un entorno pensado exclusivamente para ello.
 
-El objetivo del proyecto no es el dominio en sí, sino demostrar la capacidad de diseñar, construir y desplegar una aplicación fullstack completa de forma autónoma.
+El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología Scrum, gestión de tareas en Trello y desplegado en producción.
 
 ---
 
@@ -40,10 +44,10 @@ El objetivo del proyecto no es el dominio en sí, sino demostrar la capacidad de
     ▼
 [React SPA]  ──── JWT en headers ────▶  [Spring Boot API]
                                                │
-                          ┌────────────────────┼───────────────┐
-                          ▼                    ▼               ▼
-                    [PostgreSQL           [Cloudinary]     [Supabase]
-                     en Supabase]         (imágenes)       (hosting DB)
+                     ┌─────────────────────────┼──────────────────┐
+                     ▼                         ▼                  ▼
+               [PostgreSQL               [Cloudinary]        [Supabase]
+                en Supabase]             (imágenes)          (hosting DB)
 ```
 
 ---
@@ -79,49 +83,69 @@ El objetivo del proyecto no es el dominio en sí, sino demostrar la capacidad de
 
 **→ Repositorio:** [Front-Patitas-Conectadas-render.com](https://github.com/Fernandodg97/Front-Patitas-Conectadas-render.com)
 
+### Gestión del proyecto
+
+| | |
+|---|---|
+| Metodología | Scrum |
+| Tablero | Trello (sprints, backlog, revisiones) |
+| Control de versiones | Git + GitHub |
+
 ---
 
-## Qué he resuelto en este proyecto
+## Funcionalidades
+
+| Módulo | Descripción |
+|---|---|
+| **Feed** | Publicaciones con imagen, comentarios y reacciones |
+| **Perfil** | Foto, bio, seguidores/seguidos, valoraciones 1–5 ⭐ |
+| **Mascotas** | Registro con foto, especie, género y fecha de nacimiento |
+| **Geolocalización** | Sugerencias de usuarios cercanos basadas en ubicación |
+| **Eventos** | Crear y apuntarse a eventos con ubicación y fecha |
+| **Grupos** | Comunidades con roles Administrador / Miembro y feed propio |
+| **Chat** | Mensajería directa con estado visto/no visto |
+| **Notificaciones** | Centro de notificaciones en tiempo real por usuario |
+| **Protectoras** | Sección dedicada a organizaciones de rescate animal |
+
+---
+
+## Retos técnicos resueltos
 
 ### Autenticación y seguridad
 - Registro y login con emisión de JWT firmado
 - Filtros de Spring Security que validan el token en cada request entrante
 - Contraseñas hasheadas con BCrypt
-- Rutas protegidas en el frontend con React Router; token persistido en `localStorage`
+- Rutas protegidas en el frontend con React Router; sesión persistida en `localStorage`
+- Validaciones de entrada en todos los endpoints de la API
+
+### Chat y notificaciones en tiempo real
+- Sistema de mensajería directa con estado de lectura (visto/no visto)
+- Centro de notificaciones por usuario integrado en el backend y consumido desde el frontend
+- Gestión del estado de conversaciones activas sin WebSockets: polling ligero desde el cliente
+
+### Relación usuarios–mascotas
+- Un usuario puede tener varias mascotas con perfil propio (foto, especie, género, edad)
+- Los posts y eventos pueden asociarse a una mascota concreta del perfil
+- Diseño de entidades JPA con relaciones `@OneToMany` / `@ManyToOne` correctamente mapeadas
 
 ### Subida y gestión de imágenes en la nube
 - Integración completa con Cloudinary: posts, comentarios, perfiles y mascotas
-- El frontend envía los archivos como `multipart/form-data`; el backend los sube y devuelve la URL pública
+- El frontend envía archivos como `multipart/form-data`; el backend los sube y devuelve la URL pública
 - Eliminación automática de la imagen anterior al actualizar, para evitar archivos huérfanos
 
 ### API REST con documentación interactiva
 - 14 controladores cubriendo: auth, usuarios, perfiles, posts, comentarios, mascotas, eventos, grupos, chat, notificaciones, valoraciones y protectoras
-- DTOs para separar la capa de persistencia de la API pública
-- Documentación Swagger/OpenAPI accesible y navegable sin autenticación previa
+- DTOs para desacoplar la capa de persistencia de la API pública
+- Swagger/OpenAPI navegable sin autenticación previa
 
 ### Docker y despliegue
-- Build multi-stage: primera etapa compila con Maven, segunda etapa copia solo el `.jar` sobre una imagen JRE ligera
+- Build multi-stage: Maven compila en la primera etapa, el `.jar` final se copia sobre una imagen JRE ligera
 - Variables de entorno para base de datos, Cloudinary y JWT key fuera del código fuente
 - La imagen se despliega directamente en Render sin pasos manuales adicionales
 
 ### Diseño responsive
 - Dos modos de navegación: `Sidebar` en escritorio, `MobileBottomNav` en móvil
 - Layouts construidos íntegramente con Tailwind, sin librerías de componentes externas
-
----
-
-## Funcionalidades de la aplicación
-
-| Módulo | Descripción |
-|---|---|
-| **Feed** | Publicaciones con imagen, comentarios y reacciones |
-| **Perfil** | Foto, bio, seguidores/seguidos, valoraciones 1–5 estrellas |
-| **Mascotas** | Registro con foto, especie, género y fecha de nacimiento |
-| **Eventos** | Crear y apuntarse a eventos con ubicación y fecha |
-| **Grupos** | Comunidades con roles Administrador / Miembro y feed propio |
-| **Chat** | Mensajería directa con estado visto/no visto |
-| **Notificaciones** | Centro de notificaciones por usuario |
-| **Protectoras** | Sección dedicada a organizaciones de rescate animal |
 
 ---
 
@@ -140,9 +164,20 @@ El objetivo del proyecto no es el dominio en sí, sino demostrar la capacidad de
 
 ---
 
-## Autor
+## Visión de futuro
 
-Desarrollador fullstack con foco en Java/Spring Boot en backend y React/TypeScript en frontend. Este proyecto lo construí de principio a fin para demostrar que puedo tomar una idea, diseñar la arquitectura, implementar ambos lados del stack y dejarlo funcionando en producción.
+- 📱 Aplicación móvil nativa (React Native)
+- 🏥 Integración con veterinarias y ONGs de rescate
+- 🛒 Marketplace de productos para mascotas
+- 💳 Sistema freemium con suscripciones premium
 
-- **GitHub:** [github.com/Fernandodg97](https://github.com/Fernandodg97)
-- **Email:** ferdiaz1997@gmail.com
+---
+
+## Autores
+
+| | |
+|---|---|
+| **Fernando Díaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) · ferdiaz1997@gmail.com |
+| **Mouad Sedjari** | [github.com/Msedjari](https://github.com/Msedjari) |
+
+Proyecto Final de Grado · Ciclo Superior de Desarrollo de Aplicaciones Web (DAW)
