@@ -9,7 +9,7 @@
 [![Scrum](https://img.shields.io/badge/Metodología-Scrum-0052CC?style=for-the-badge&logo=trello&logoColor=white)]()
 
 **Proyecto Final de Grado · Desarrollo de Aplicaciones Web (DAW)**
-Desarrollado en equipo por **Fernando Díaz** y **Mouad Sedjari**.
+Desarrollado en equipo por **Fernando Diaz** y **Mouad Sedjari**.
 
 Red social fullstack especializada en mascotas: API REST con Java y Spring Boot, frontend SPA con React y TypeScript, autenticación JWT, almacenamiento de imágenes en Cloudinary, base de datos PostgreSQL en Supabase, despliegue con Docker en Render y metodología ágil Scrum.
 
@@ -172,6 +172,19 @@ El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología 
 
 ---
 
+## 🚀 Mejoras Post-Práctica
+
+El proyecto entregado como TFG funcionaba en local. Tras la defensa, Fernando continuó el desarrollo de forma autónoma para dejarlo listo para producción:
+
+| Mejora | Detalle |
+|---|---|
+| 🐳 **Dockerización** | Creación de un `Dockerfile` con build multi-stage: Maven compila en la primera etapa y solo el `.jar` final se copia sobre una imagen JRE ligera, reduciendo el tamaño de la imagen al mínimo |
+| ☁️ **Despliegue en producción** | La imagen Docker se despliega automáticamente en Render. El frontend se sirve como static site, también en Render. Ambos servicios están activos y accesibles públicamente |
+| 🖼️ **Cloudinary** | Sustitución del almacenamiento local de imágenes por Cloudinary. Las imágenes de posts, perfiles, mascotas y comentarios se suben a la nube y se eliminan automáticamente al actualizar o borrar |
+| 🗄️ **Supabase** | Migración de la base de datos local a PostgreSQL en Supabase con conexión SSL, eliminando la necesidad de tener una instancia local para ejecutar el proyecto |
+
+---
+
 ## Documentación del proyecto
 
 Este repositorio agrupa toda la documentación generada durante el desarrollo del TFG:
@@ -192,7 +205,7 @@ Este repositorio agrupa toda la documentación generada durante el desarrollo de
 
 | | |
 |---|---|
-| **Fernando Díaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) · ferdiaz1997@gmail.com |
+| **Fernando Diaz** | [github.com/Fernandodg97](https://github.com/Fernandodg97) · ferdiaz1997@gmail.com |
 | **Mouad Sedjari** | [github.com/Msedjari](https://github.com/Msedjari) |
 
 Proyecto Final de Grado · Ciclo Superior de Desarrollo de Aplicaciones Web (DAW)
