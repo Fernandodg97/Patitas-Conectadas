@@ -30,7 +30,7 @@ Red social fullstack especializada en mascotas: API REST con Java y Spring Boot,
 
 ## ¿Qué es Patitas Conectadas?
 
-Redes como Instagram o Facebook no están pensadas para gestionar perfiles de mascotas ni para conectar a personas que comparten el cuidado de sus animales. Patitas Conectadas cubre ese hueco: una red social vertical donde los dueños pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, geolocalizar usuarios cercanos y gestionar el perfil de sus mascotas — todo en un entorno pensado exclusivamente para ello.
+Redes como Instagram o Facebook no están pensadas para gestionar perfiles de mascotas ni para conectar a personas que comparten el cuidado de sus animales. Patitas Conectadas cubre ese hueco: una red social vertical donde los dueños pueden publicar en un feed, seguirse entre sí, chatear, crear grupos y eventos, y gestionar el perfil de sus mascotas — todo en un entorno pensado exclusivamente para ello.
 
 El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología Scrum, gestión de tareas en Trello y desplegado en producción.
 
@@ -100,7 +100,6 @@ El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología 
 | **Feed** | Publicaciones con imagen, comentarios y reacciones |
 | **Perfil** | Foto, bio, seguidores/seguidos, valoraciones 1–5 ⭐ |
 | **Mascotas** | Registro con foto, especie, género y fecha de nacimiento |
-| **Geolocalización** | Sugerencias de usuarios cercanos basadas en ubicación |
 | **Eventos** | Crear y apuntarse a eventos con ubicación y fecha |
 | **Grupos** | Comunidades con roles Administrador / Miembro y feed propio |
 | **Chat** | Mensajería directa con estado visto/no visto |
@@ -170,6 +169,22 @@ El proyecto es el TFG de DAW de Fernando y Mouad, desarrollado con metodología 
 - 🏥 Integración con veterinarias y ONGs de rescate
 - 🛒 Marketplace de productos para mascotas
 - 💳 Sistema freemium con suscripciones premium
+
+---
+
+## Documentación del proyecto
+
+Este repositorio agrupa toda la documentación generada durante el desarrollo del TFG:
+
+| Archivo | Descripción |
+|---|---|
+| [`DAW M12 - Patitas conectadas - Fernando Diaz y Mouad Sedjari.pdf`](./DAW%20M12%20-%20Patitas%20conectadas%20-%20Fernando%20Diaz%20y%20Mouad%20Sedjari.pdf) | Memoria técnica completa del proyecto (M12 · DAW): análisis, diseño, implementación y conclusiones |
+| [`DEFENSA DEL PROYECTO - PATITAS CONECTADAS.pdf`](./DEFENSA%20DEL%20PROYECTO%20-%20PATITAS%20CONECTADAS.pdf) | Guión de la defensa oral: exposición comercial, desarrollo técnico, demo guiada y conclusiones |
+| [`Patitas Conectadas.pdf`](./Patitas%20Conectadas.pdf) | Presentación en diapositivas usada durante la defensa del TFG |
+| [`Patitas Conectadas.pptx`](./Patitas%20Conectadas.pptx) | Versión editable de la presentación (PowerPoint) |
+| [`Casos de uso.pdf`](./Casos%20de%20uso.pdf) | Diagrama de casos de uso del sistema |
+| [`patitasconectadas_alpha07.excalidraw`](./patitasconectadas_alpha07.excalidraw) | Diseño de wireframes y arquitectura visual elaborado en Excalidraw |
+| [`Wireframe Patitas Conectadas.png`](./Wireframe%20Patitas%20Conectadas.png) | Exportación visual del wireframe completo de la aplicación |
 
 ---
 
